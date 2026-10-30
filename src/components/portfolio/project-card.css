@@ -1,0 +1,230 @@
+article.project-card.project-accessvision,
+.project-dialog.project-accessvision {
+  --pj: #0f7b5f;
+}
+article.project-card.project-signbridge,
+.project-dialog.project-signbridge {
+  --pj: #0a66c2;
+}
+article.project-card.project-food,
+.project-dialog.project-food {
+  --pj: #c8413a;
+}
+article.project-card.project-house,
+.project-dialog.project-house {
+  --pj: #0a66c2;
+}
+article.project-card.project-grades,
+.project-dialog.project-grades {
+  --pj: #7a4fa3;
+}
+article.project-card.project-calculator,
+.project-dialog.project-calculator {
+  --pj: #d6382f;
+}
+
+/* no lifted box on hover */
+article.project-card,
+article.project-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* spacing and text sizes */
+article.project-card .project-meta {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 18px;
+}
+article.project-card .project-title-row {
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+article.project-card .project-title-row h3 {
+  font-size: clamp(1.7rem, 2.3vw, 2.1rem);
+  font-weight: 500;
+  line-height: 1.2;
+  transition: color 0.2s ease;
+}
+article.project-card:hover .project-title-row h3 {
+  color: var(--pj);
+}
+
+/* round arrow button: soft project color, fills on hover */
+article.project-card .project-title-row button {
+  width: 42px;
+  height: 42px;
+  flex: none;
+  border-radius: 9999px;
+  color: var(--pj);
+  background: color-mix(in srgb, var(--pj) 10%, #fff);
+  border: 1px solid color-mix(in srgb, var(--pj) 22%, #fff);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+article.project-card .project-title-row button:hover {
+  background: var(--pj);
+  color: #fff;
+}
+
+/* status line with dot */
+article.project-card .project-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+article.project-card .project-state-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: currentColor;
+  flex: none;
+}
+article.project-card .project-state.is-done {
+  color: #0f7b4f;
+}
+article.project-card .project-state.is-planned {
+  color: #0a66c2;
+}
+
+article.project-card .project-subtitle {
+  color: var(--pj);
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin: 0 0 14px;
+}
+article.project-card .project-description {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #6b665f;
+  margin: 0 0 20px;
+}
+
+/* colored tags */
+article.project-card .stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 26px;
+}
+article.project-card .stack-tags span,
+.project-dialog .stack-tags span {
+  color: var(--pj);
+  border: 1px solid color-mix(in srgb, var(--pj) 30%, transparent);
+  background: color-mix(in srgb, var(--pj) 8%, #fff);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+article.project-card .stack-tags span:hover,
+.project-dialog .stack-tags span:hover {
+  background: var(--pj);
+  color: #fff;
+  border-color: var(--pj);
+  transform: translateY(-1px);
+}
+
+/* buttons in one row */
+article.project-card .project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+article.project-card .project-actions .project-detail-link {
+  color: var(--pj);
+  padding: 0;
+  height: auto;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+article.project-card .project-actions .project-detail-link:hover {
+  transform: translateX(3px);
+  background: transparent;
+}
+
+article.project-card .project-actions a.github-button,
+.project-dialog a.github-button {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  margin: 0;
+  padding: 11px 18px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 10px;
+  background: #fff;
+  color: #1c2128;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+article.project-card .project-actions a.github-button svg,
+.project-dialog a.github-button svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+article.project-card .project-actions a.github-button:hover,
+.project-dialog a.github-button:hover {
+  transform: translateY(-2px);
+  border-color: #1c2128;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.project-dialog a.github-button {
+  margin-top: 14px;
+}
+
+/* the picture zooms a little on hover */
+article.project-card .project-visual {
+  overflow: hidden;
+}
+article.project-card .project-visual img {
+  transition: transform 0.5s ease;
+}
+article.project-card:hover .project-visual img {
+  transform: scale(1.035);
+}
+
+.project-dialog h4 {
+  color: var(--pj);
+}
+.project-dialog .feature-list svg {
+  color: var(--pj);
+}
+
+/* seble-art */
+article.project-card.project-chat,
+.project-dialog.project-chat {
+  --pj: #0f7b5f;
+}
+article.project-card.project-registration,
+.project-dialog.project-registration {
+  --pj: #d97706;
+}
+.project-visual svg.visual-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
